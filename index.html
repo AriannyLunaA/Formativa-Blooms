@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Blooms - Suscripción Floral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Blooms </h1>
+        <p>Tu dosis de naturaleza, entregada cada semana en tu puerta.</p>
+    </header>
+
+    <nav>
+        <a href="#galeria">Nuestros Ramos</a>
+        <a href="#interaccion">Suscribirse</a>
+    </nav>
+
+    <main>
+        <!-- Columna Izquierda: Imagen Estática Original -->
+        <section id="galeria">
+            <article class="bloque-elegante">
+                <h2>Diseños de Temporada</h2>
+                <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=600" alt="Ramo de flores frescas" class="imagen-fluida">
+                <p>Nuestros floristas seleccionan los mejores cortes frescos del día. Una selección exclusiva pensada para elevar tus espacios con la más alta calidad botánica.</p>
+            </article>
+        </section>
+
+        <!-- Columna Derecha: Video y Registro en cuadros separados -->
+        <section id="interaccion" class="columna-derecha">
+            
+            <!-- Cuadro 1: Video -->
+            <article class="bloque-elegante">
+                <h2>El Arte de Crear</h2>
+                <iframe class="video-fluido" src="https://www.youtube.com/embed/3kylDMqVFBw?si=0d-jHkth6rxwOVB0&amp;controls=0" title="Proceso de recolección de flores" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+
+            <!-- Cuadro 2: Registro -->
+            <article class="bloque-elegante">
+                <h2>Crea tu Cuenta</h2>
+                <form id="formulario-registro" class="formulario">
+                    
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" autocomplete="name" placeholder="Ej: Ana Silva">
+                    <span id="error-nombre" class="mensaje-validacion"></span>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" autocomplete="email" placeholder="correo@ejemplo.com">
+                    <span id="error-email" class="mensaje-validacion"></span>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" autocomplete="new-password" placeholder="Crea tu contraseña">
+                    <span id="sugerencia-password" class="mensaje-sugerencia"></span>
+                    <span id="error-password" class="mensaje-validacion"></span>
+
+                    <label for="plan">Elige tu Diseño de Temporada:</label>
+                    <select id="plan">
+                        <option value="">Selecciona tu ramo favorito...</option>
+                        <option value="diseno1">Diseño 1: Brisa de Primavera</option>
+                        <option value="diseno2">Diseño 2: Encanto de Bosque</option>
+                        <option value="diseno3">Diseño 3: Imperial Dorado</option>
+                    </select>
+                    <span id="error-plan" class="mensaje-validacion"></span>
+
+                    <button type="submit" id="btn-registrar">Comenzar Suscripción</button>
+                </form>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <svg width="180" height="60" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <path id="petalo" d="M 0,0 C -5,-4 -4,-11 0,-13 C 4,-11 5,-4 0,0" />
+                <path id="hoja" d="M 0,0 C -4,4 -4,10 0,12 C 4,10 4,4 0,0" />
+                <g id="flor-sakura">
+                    <use href="#petalo" fill="#e3a8b5" transform="rotate(0)" />
+                    <use href="#petalo" fill="#c28d97" transform="rotate(72)" />
+                    <use href="#petalo" fill="#e3a8b5" transform="rotate(144)" />
+                    <use href="#petalo" fill="#fadce1" transform="rotate(216)" />
+                    <use href="#petalo" fill="#c28d97" transform="rotate(288)" />
+                    <circle cx="0" cy="0" r="2" fill="#ffffff"/>
+                </g>
+                <g id="flor-sakura-pequena">
+                    <use href="#petalo" fill="#fadce1" transform="rotate(0) scale(0.6)" />
+                    <use href="#petalo" fill="#e3a8b5" transform="rotate(72) scale(0.6)" />
+                    <use href="#petalo" fill="#c28d97" transform="rotate(144) scale(0.6)" />
+                    <use href="#petalo" fill="#e3a8b5" transform="rotate(216) scale(0.6)" />
+                    <use href="#petalo" fill="#fadce1" transform="rotate(288) scale(0.6)" />
+                    <circle cx="0" cy="0" r="1.2" fill="#ffffff"/>
+                </g>
+            </defs>
+            <path d="M 15 52 Q 75 60 165 15" fill="none" stroke="var(--borde-solido)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 65 46 Q 100 25 125 8" fill="none" stroke="var(--borde-solido)" stroke-width="1.5" stroke-linecap="round"/>
+            <use href="#hoja" fill="var(--texto-oscuro)" x="135" y="22" transform="rotate(60 135 22) scale(0.8)" />
+            <use href="#hoja" fill="var(--texto-oscuro)" x="85" y="45" transform="rotate(120 85 45) scale(0.7)" />
+            <use href="#flor-sakura" x="42" y="47" transform="rotate(15 42 47)" />
+            <use href="#flor-sakura" x="110" y="16" transform="rotate(-20 110 16)" />
+            <use href="#flor-sakura-pequena" x="160" y="18" transform="rotate(45 160 18)" />
+        </svg>
+        <p>Desarrollado por Arianny Luna - DSY1104</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
